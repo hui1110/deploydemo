@@ -45,7 +45,6 @@ code{
     <span style="font-size: 16px">Whether to authenticate and deploy the code.</span>
     <br/>
     <code id="code"></code>
-    <br/>
     <button onclick=toAuth()>Sure</button>
 
     <button onclick=goBack()>Cancel</button>
@@ -55,7 +54,7 @@ code{
 
     const redirectUri = "http://localhost:8888/deploy" + location.search;
     const code = document.getElementById("code");
-    code.innerText(location.search.substring(0));
+    code.innerText=location.search.substring(0);
 
     function toAuth(){
         console.log(redirectUri);
