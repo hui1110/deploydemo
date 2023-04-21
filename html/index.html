@@ -51,10 +51,11 @@
 
 <script>
 
-    const redirectUri = "https://hui1110.github.io/deploydemo/deploy/" + location.search;
+    const redirectUri = "http://localhost:8888/deploy" + location.search;
 
     function toAuth(){
-        location.assign('http://localhost:8888/login' + '?redirect_uri=' + redirectUri);
+        console.log(redirectUri);
+        location.assign(redirectUri);
     }
 
     function goBack(){
