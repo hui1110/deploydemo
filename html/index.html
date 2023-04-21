@@ -54,7 +54,7 @@ code{
 
     const redirectUri = "http://localhost:8888/deploy" + location.search;
     const code = document.getElementById("code");
-    code.innerText=location.search.substring(1);
+    code.innerText=location.search.substring(5);
 
     function toAuth(){
         console.log(redirectUri);
