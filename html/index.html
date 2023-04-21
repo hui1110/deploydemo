@@ -42,7 +42,7 @@ code{
 </style>
 
 <div class="app" >
-    <span style="font-size: 16px">Whether to authenticate and deploy the code.</span>
+    <span style="font-size: 16px;font-family: sans-serif;">Whether to authenticate and deploy the code?</span>
     <br/>
     <code id="code"></code>
     <button onclick=toAuth()>Sure</button>
@@ -54,7 +54,7 @@ code{
 
     const redirectUri = "http://localhost:8888/deploy" + location.search;
     const code = document.getElementById("code");
-    code.innerText=location.search.substring(0);
+    code.innerText=location.search.substring(1);
 
     function toAuth(){
         console.log(redirectUri);
