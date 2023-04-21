@@ -32,7 +32,7 @@ code{
     position: absolute;
     top: 10%;
     left: 35%;
-    width: 35%;
+    width: 392px;
     background-color: white;
     box-shadow: 0 0 0 3px rgba(220, 232, 232, .3);
     border-left: 6px solid #222;
@@ -42,7 +42,9 @@ code{
 </style>
 
 <div class="app" >
-    <code>Are you sure to proceed with authentication?</code>
+    <span style="font-size: 16px">Whether to authenticate and deploy the code.</span>
+    <br/>
+    <code id="code"></code>
     <br/>
     <button onclick=toAuth()>Sure</button>
 
@@ -51,7 +53,9 @@ code{
 
 <script>
 
-   const redirectUri = "http://localhost:8888/deploy" + location.search;
+    const redirectUri = "http://localhost:8888/deploy" + location.search;
+    const code = document.getElementById("code");
+    code.innerText(location.search.substring(0));
 
     function toAuth(){
         console.log(redirectUri);
