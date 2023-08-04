@@ -1,4 +1,4 @@
-name: Azure Spring Apps
+name: Deploy to Azure Spring Apps
 on:
   # Automatically trigger it when detected changes in repo
   push:
